@@ -1,7 +1,7 @@
 great-validator
 ===============
 
-Asynchronus laravel-like validator for Node.js
+Asynchronus laravel-like validator for Node.js using Express
 
 
 ## Release History

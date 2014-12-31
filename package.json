@@ -1,0 +1,28 @@
+{
+  "name": "great-validator",
+  "version": "0.1.0",
+  "description": "Asynchronus laravel-like validator for Node.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ejoseca/great-validator.git"
+  },
+  "keywords": [
+    "npm",
+    "node",
+    "validation",
+    "laravel"
+  ],
+  "author": "José Carlos Izquierdo Carrasco",
+  "license": "Apache",
+  "bugs": {
+    "url": "https://github.com/ejoseca/great-validator/issues"
+  },
+  "homepage": "https://github.com/ejoseca/great-validator",
+  "dependencies": {
+	  "bluebird": "~2.0"
+  }
+}

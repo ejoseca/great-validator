@@ -228,6 +228,27 @@ var Validator = function (rules, data, models) {
 		return this.validateNumeric(attribute) && value.length >= parameters[0] && value.length <= parameters[1];
 	};
 
+	this.validateSize = function(attribute, parameters) {
+		//this.requireParameterCount(1, parameters, 'size');
+		return this.getSize(this.data[attribute]) == parameters[0];
+	};
+
+	this.validateBetween = function(attribute, parameters) {
+		//this.requireParameterCount(2, parameters, 'between');
+		var value = this.getSize(this.data[attribute])];
+		return parameters[0] <= value && value <= parameters[1];
+	};
+
+	this.validateMin = function(attribute, parameters) {
+		//this.requireParameterCount(1, parameters, 'min');
+		return this.getSize(this.data[attribute]) >= parameters[0];
+	};
+
+	this.validateMax = function(attribute, parameters) {
+		//this.requireParameterCount(1, parameters, 'max');
+		return this.getSize(this.data[attribute]) <= parameters[0];
+	};
+
 	this.validateIn = function(attribute, parameters) {
 		return this.in_array(this.data[attribute], parameters);
 	};
@@ -413,6 +434,17 @@ var Validator = function (rules, data, models) {
 
 	this.oneIfLeapYear = function(year) {
 		return year%4==0 && (year%100!=0 || year%400==0) ? 1 : 0;
+	};
+
+	this.getSize = function(value) {
+		if (typeof value === 'number')
+			return number;
+		if (typeof value === 'string')
+			return value.length;
+		if (value instanceof Array)
+			return value.length;
+		else
+			return (''+value).length;
 	};
 
 

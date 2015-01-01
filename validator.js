@@ -183,7 +183,7 @@ var Validator = function (rules, data, models) {
 
 	this.validateRequiredIf = function(attribute, parameters) {
 		//this.requireParameterCount(2, parameters, 'required_if');
-		if (parameters[1] != this.data[parameters[0]])
+		if (parameters[1] == this.data[parameters[0]])
 			return this.validateRequired(attribute);
 		return true;
 	};

@@ -1,6 +1,6 @@
 {
   "name": "great-validator",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "Asynchronus laravel-like validator for Node.js",
   "main": "index.js",
   "scripts": {

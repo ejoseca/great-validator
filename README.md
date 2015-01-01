@@ -1,7 +1,7 @@
 great-validator
 ===============
 
-Asynchronous laravel-like validator for Node.js using Express
+Asynchronous laravel-like validator for Node.js using Sequelize
 
 ## Quick start
 
@@ -40,6 +40,7 @@ validator.check()
 
 ## Release History
 
+* 0.2.4 Docs
 * 0.2.3 Orthography in docs
 * 0.2.2 Updated Release History in README.md
 * 0.2.1 Updated version in package.json

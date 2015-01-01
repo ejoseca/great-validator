@@ -40,6 +40,7 @@ validator.check()
 
 ## Release History
 
+* 0.2.6 Bugs and docs
 * 0.2.5 Updated description in package.json
 * 0.2.4 Docs
 * 0.2.3 Orthography in docs

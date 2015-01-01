@@ -1,6 +1,6 @@
 {
   "name": "great-validator",
-  "version": "0.2.5",
+  "version": "0.2.6",
   "description": "Asynchronous laravel-like validator for Node.js using Sequelize",
   "main": "index.js",
   "scripts": {

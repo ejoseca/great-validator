@@ -40,5 +40,6 @@ validator.check()
 
 ## Release History
 
+* 0.2.0 More validation rules
 * 0.1.0 Initial release
 

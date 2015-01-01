@@ -40,6 +40,8 @@ validator.check()
 
 ## Release History
 
+* 0.2.2 Updated Release History in README.md
+* 0.2.1 Updated version in package.json
 * 0.2.0 More validation rules
 * 0.1.0 Initial release
 

@@ -25,7 +25,7 @@ var Validator = function (rules, data, models) {
 	this.constructor = function(rules, data, models) {
 		this.rules = this.explodeRules(rules);
 		this.data = data || {};
-		this.models = models || {};
+		this.models = models || Validator.models;
 	};
 
 
@@ -419,6 +419,14 @@ var Validator = function (rules, data, models) {
 		return this.messages;
 	};
 
+	this.passes = function() {
+		return this.messages.length == 0;
+	};
+
+	this.fails = function() {
+		return !this.passes;
+	};
+
 
 
 	/*******************************************/
@@ -454,6 +462,25 @@ var Validator = function (rules, data, models) {
 	this.constructor(rules, data, models);
 };
 
+
+
+
+/***************************************************/
+/***************** class methods *******************/
+
+Validator.models = {}; // Do not use directly
+Validator.setModels = function(models) {
+	for (var model in Validator.models)
+		delete Validator.models[model];
+	for (var model in models)
+		Validator.models[model] = models[model];
+};
+
+
+
+
+/******************************************/
+/**************** exports *****************/
 
 module.exports = Validator;
 

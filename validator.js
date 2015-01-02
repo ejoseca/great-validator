@@ -242,7 +242,7 @@ var Validator = function (rules, data, models) {
 
 	this.validateBetween = function(attribute, parameters) {
 		//this.requireParameterCount(2, parameters, 'between');
-		var value = this.getSize(this.data[attribute])];
+		var value = this.getSize(this.data[attribute]);
 		return parameters[0] <= value && value <= parameters[1];
 	};
 

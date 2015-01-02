@@ -283,7 +283,7 @@ var Validator = function (rules, data, models) {
 				validator.models[parameters[0]].find({where: where})
 				.then(function(instance) {
 					if (instance) {
-						this.addFoundModel(attribute, instance);
+						validator.addFoundModel(attribute, instance);
 						resolve(false);
 					}
 					else {

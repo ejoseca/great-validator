@@ -11,7 +11,7 @@
 	* [`passes()`](#passes)
 	* [`fails()`](#fails)
 	* [`setData(data)`](#setdatadata)
-	* [`setModels(models)`](#setmodelsmodel-1)
+	* [`setModels(models)`](#setmodelsmodels-1)
 	* [`setRules(rules)`](#setrulesrules)
 
 ## Class methods

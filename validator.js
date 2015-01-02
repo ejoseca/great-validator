@@ -126,10 +126,10 @@ var Validator = function (rules, data, models) {
 		return message;
 	};
 
-	this.addFoundModel = function(attribue, model) {
-		if (this.foundModels[attribute] == undefined)
-			this.foundModels[attribute] = [];
-		this.foundModels[attribute].push(model);
+	this.addFoundModel = function(ruleName, model) {
+		if (this.foundModels[ruleName] == undefined)
+			this.foundModels[ruleName] = [];
+		this.foundModels[ruleName].push(model);
 	};
 
 

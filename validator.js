@@ -12,6 +12,7 @@ var Validator = function (rules, data, models) {
 	this.models = {};
 	this.messages = {};
 	this.failedRules = {};
+	this.foundModels = {};
 
 	this.sizeRules = ['Size', 'Between', 'Min', 'Max'];
 	this.numericRules = ['Numeric', 'Integer'];
@@ -123,6 +124,12 @@ var Validator = function (rules, data, models) {
 	this.getMessage = function(attribute, rule) {
 		var message = 'Failed validation of attribute "'+attribute+'" for rule "'+rule.name+'".';
 		return message;
+	};
+
+	this.addFoundModel = function(attribue, model) {
+		if (this.foundModels[attribute] == undefined)
+			this.foundModels[attribute] = [];
+		this.foundModels[attribute].push(model);
 	};
 
 
@@ -382,6 +389,7 @@ var Validator = function (rules, data, models) {
 	this.check = function() {
 
 		this.messages = {};
+		this.foundModels = {};
 
 		var validations = [];
 		for (var attribute in this.rules)

@@ -53,6 +53,7 @@ validator.check()
 
 ## Release History
 
+* 0.3.1 Docs
 * 0.3.0 This is 0.2.7 with right version number
 * 0.2.7 Added methods "passes" and "fails. Added "foundModels". Bugs and docs
 * 0.2.6 Bugs and docs

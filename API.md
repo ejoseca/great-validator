@@ -1,8 +1,8 @@
 # API
 
 * Class methods
-	* [`new Validator(rules, data, models)` - constructor](#new-Validatorrules-data-models---constructor)
-	* [`setModels(models)`](#setModelsmodels)
+	* [`new Validator(rules, data, models)` - constructor](#new-validatorrules-data-models---constructor)
+	* [`setModels(models)`](#setmodelsmodels)
 
 * Instance methods
 
@@ -10,9 +10,9 @@
 	* [`errors()`](#errors)
 	* [`passes()`](#passes)
 	* [`fails()`](#fails)
-	* [`setData(data)`](#setDatadata)
-	* [`setModels(models)`](#setModelsmodel-1)
-	* [`setRules(rules)`](#setRulesrules)
+	* [`setData(data)`](#setdatadata)
+	* [`setModels(models)`](#setmodelsmodel-1)
+	* [`setRules(rules)`](#setrulesrules)
 
 ## Class methods
 

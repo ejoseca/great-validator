@@ -22,4 +22,5 @@
 * `requiredWithoutAll:field1,field2,...`
 * `same:field`
 * `size:value`
-* `unique`
+* `unique:model,attribute`
+

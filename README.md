@@ -7,15 +7,25 @@ Asynchronous laravel-like validator for Node.js using Sequelize
 
 ## Quick start
 
+#### Installation
 ```
 npm install great-validator
 ```
 
+#### Configuration
+When using rules that need to access the database (unique, etc)
+```javascript
+var db = require('../Models');
+var Validator = require('great-validator');
+Validator.setModels(db);
+```
+
+#### Using de validator
 ```javascript
 var Validator = require('great-validator');
 
 var rules = {
-    email:    'email|required',
+    email:    'required|email|unique:User,email',
     password: 'required|min:8'
 }
 

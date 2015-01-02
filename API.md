@@ -1,7 +1,7 @@
 # API
 
 * Class methods
-	* `new Validator(rules, data, models)`
+	* [`new Validator(rules, data, models)` - constructor](#new Validator(rules, data, models) - constructor)
 	* `setModels(models)`
 
 * Instance methods
@@ -16,24 +16,24 @@
 
 ## Class methods
 
-#### `new Validator(rules, data, models)`
+### `new Validator(rules, data, models)` - constructor
 
-#### `setModels(models)`
+### `setModels(models)`
 
 
 ## Instance methods
 
-#### `check()`
+### `check()`
 
-#### `errors()`
+### `errors()`
 
-#### `passes()`
+### `passes()`
 
-#### `fails()`
+### `fails()`
 
-#### `setData(data)`
+### `setData(data)`
 
-#### `setModels(models)`
+### `setModels(models)`
 
-#### `setRules(rules)`
+### `setRules(rules)`
 

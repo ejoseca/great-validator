@@ -3,6 +3,8 @@ great-validator
 
 Asynchronous laravel-like validator for Node.js using Sequelize
 
+* [Validation rules](RULES.md)
+
 ## Quick start
 
 ```

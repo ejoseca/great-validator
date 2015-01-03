@@ -21,7 +21,7 @@ var Validator = require('great-validator');
 Validator.setModels(db);
 ```
 
-#### Using de validator
+#### Using the validator
 ```javascript
 var Validator = require('great-validator');
 

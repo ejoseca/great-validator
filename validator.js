@@ -457,7 +457,7 @@ var Validator = function (rules, data, models) {
 
 	this.getSize = function(value) {
 		if (typeof value === 'number')
-			return number;
+			return value;
 		if (typeof value === 'string')
 			return value.length;
 		if (value instanceof Array)

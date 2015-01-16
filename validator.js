@@ -305,6 +305,47 @@ var Validator = function (rules, data, models) {
 		return promise;
 	};
 
+	this.validateExists = function(attribute, parameters) {
+
+		var validator = this;
+
+		var promise = new Promise(function(resolve, reject) {
+
+			//validator.requireParameterCount(1, parameters, 'unique');
+
+			if (parameters[1] === undefined)
+				parameters[1] = attribute;
+
+			var where = {};
+			where[parameters[1]] = validator.data[attribute];
+
+			if (validator.models[parameters[0]]) {
+
+				validator.models[parameters[0]].find({where: where})
+				.then(function(instance) {
+					if (instance) {
+						validator.addFoundModel(attribute, instance);
+						resolve(true);
+					}
+					else {
+						resolve(false);
+					}
+				})
+				.catch(function(err) {
+					reject(err);
+				});
+
+			} else {
+
+				var err = 'Model "'+parameters[0]+'" not found';
+				reject(err);
+
+			}
+		});
+
+		return promise;
+	};
+
 	this.validateEmail = function(attribute) {
 		var regex = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 		return regex.test(this.data[attribute]);
